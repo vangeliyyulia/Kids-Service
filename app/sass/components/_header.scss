@@ -1,0 +1,48 @@
+.header {
+    background-color: #2f3c43;
+    padding: 1.5rem 2rem;
+    display: flex;
+    color: #fff;
+
+    a {
+        color: #fff;
+        font-family: "Lato-Regular";
+        font-size: 1.3rem;
+        line-height: 1;
+        text-decoration: none;
+    }
+
+    li {
+        &:not(last-child) {
+            margin-right: 2rem;
+        }
+    }
+
+    &__contacts,
+    &__user-nav {
+        display: flex;
+        align-items: center;
+
+        & span {
+            margin-left: 1rem;
+        }
+    }
+
+    &__contacts {
+        margin-right: auto;
+    }
+
+    &__user-nav {
+        margin-left: auto;
+    }
+}
+
+.cart a {
+    background-color: $red;
+    width: 3rem;
+    height: 3rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
