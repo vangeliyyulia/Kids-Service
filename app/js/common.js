@@ -27,3 +27,19 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
 };
+
+// Mobile Menu
+var el = document.querySelector('.btn_mnu');
+
+el.onclick = function() {
+  el.classList.toggle('active');
+}
+
+function toggleNav() {
+  var mmenu = document.getElementById("nav");
+  if (mmenu.style.display === "flex") {
+    mmenu.style.display = "none";
+  } else {
+    mmenu.style.display = "flex";
+  }
+}

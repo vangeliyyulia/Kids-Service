@@ -20,3 +20,43 @@
         font-size: 2rem;
     }
 }
+
+/* Кнопка меню */
+.btn_mnu {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+    position: relative;
+    display: none;
+
+    @include respond(tab-port) {
+        display: flex;
+    }
+}
+.btn_row {
+	height: 2px;
+	width: 60%;
+	margin: 2px 0;
+	background-color: #fff;
+	position: relative;
+	transition: all .5s;
+}
+.btn_mnu.active .btn_row:first-child {
+	transform: rotate(-135deg);
+	top: 6px;
+}
+.btn_mnu.active .btn_row:last-child {
+	transform: rotate(-225deg);
+	top: -6px;
+}
+.btn_mnu.active .btn_row:nth-child(2) {
+	opacity: 0;
+}
+
+.btn_mnu {
+	transition: all .5s;
+}
