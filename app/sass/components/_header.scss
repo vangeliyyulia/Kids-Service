@@ -4,6 +4,11 @@
     display: flex;
     color: #fff;
 
+    @include respond(phone) {
+        flex-direction: column;
+        justify-content: center;
+    }
+
     a {
         color: #fff;
         font-family: "Lato-Regular";
@@ -21,12 +26,21 @@
         &:not(last-child) {
             margin-right: 2rem;
         }
+
+        @include respond(phone) {
+            padding: 1.5rem;
+        }
     }
 
     &__contacts,
     &__user-nav {
         display: flex;
         align-items: center;
+
+        @include respond(phone) {
+            flex-direction: column;
+            justify-content: center;
+        }
 
         & span {
             margin-left: 1rem;
@@ -35,10 +49,18 @@
 
     &__contacts {
         margin-right: auto;
+
+        @include respond(phone) {
+            margin-right: 0;
+        }
     }
 
     &__user-nav {
         margin-left: auto;
+
+        @include respond(phone) {
+            margin-left: 0;
+        }
     }
 }
 
