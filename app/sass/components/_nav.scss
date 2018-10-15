@@ -1,0 +1,75 @@
+.nav {
+    background-color: rgba(47, 60, 67, .5);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    z-index: 50;
+    position: relative;
+
+    &__logo {
+        width: 17.8rem;
+        height: 5.5rem;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+        li {
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+
+            &:nth-child(1) a div {
+                background-color: $yellow;
+            }
+
+            &:nth-child(2) a div {
+                background-color: $green;
+            }
+
+            &:nth-child(3) a div {
+                background-color: $red;
+            }
+
+            &:nth-child(4) a div {
+                background-color: $blue;
+            }
+
+            &:nth-child(5) a div {
+                background-color: $violet;
+            }
+
+            &:nth-child(6) a div {
+                background-color: $pink;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            font-family: 'OpenSans-Semibold';
+            font-size: 1.5rem;
+            line-height: 1;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            transition: opacity .5s;
+
+            &:hover {
+                opacity: .8; 
+            }
+
+            div {
+                width: 3.5rem;
+                height: 3.5rem;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 1rem;
+            }
+        }
+    }
+
+}
