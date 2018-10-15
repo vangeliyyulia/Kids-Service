@@ -21,16 +21,17 @@
         margin-left: auto;
 
         @include respond(tab-port) {
-            display: none;
             flex-direction: column;
             align-items: flex-start;
             margin-left: 0;
             position: absolute;
-            left: 0;
+            left: -100%;
             top: 100%;
             background-color: rgba(47, 60, 67, .5);
             width: 100%;
+            height: 100vh;
             padding-left: 2rem;
+            transition: left .5s ease;
         }
 
         li {
@@ -112,10 +113,6 @@
                 justify-content: center;
                 margin-right: 1.5rem;
             }
-
-            & .active {
-                color: $yellow;
-            }
         }
     }
 
@@ -125,4 +122,12 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.nav__list.active {
+    left: 0;
+}
+
+a.active span {
+    color: $yellow;
 }
