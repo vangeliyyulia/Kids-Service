@@ -19,9 +19,16 @@
         color: $pink;
         font-size: 2rem;
     }
+
+    &--welcome {
+        font-size: 1.6rem;
+        background-color: $red;
+        color: #fff;
+        width: 15rem;
+    }
 }
 
-/* Кнопка меню */
+/* Menu button */
 .btn_mnu {
 	width: 50px;
 	height: 50px;
