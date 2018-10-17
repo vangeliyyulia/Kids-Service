@@ -1,3 +1,71 @@
 .services {
     background-color: $blue;
+    padding: 9rem 0 5rem 0;
+    color: #fff;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+    }
+
+    &__list {
+        @include respond(tab-port) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 4rem;
+
+        @include respond(tab-port) {
+            flex: 100%;
+        }
+    }
+
+    &__content {
+        margin-left: 2rem;
+    }
+
+    &__icon {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        border: .3rem solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+    }
+
+    &__item-heading {
+        font-family: "Dosis-SemiBold";
+        text-transform: uppercase;
+        font-size: 2.4rem;
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+    }
+
+    &__description {
+        font-family: "Lato-Regular";
+        font-size: 1.4rem;
+        line-height: 1.4;    
+        max-width: 27rem;  
+        text-align: justify;
+    }
+
+    &__img-box {
+        padding: 0 12rem;
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
 }
