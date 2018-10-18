@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 6.5rem;
 
     &::before, &::after {
         content: '';
@@ -31,7 +32,11 @@
     }
 
     &--services {
-        color: #fff;
-        margin-bottom: 3rem;
+        color: #fff;       
+    }
+
+    &--events {
+        color: $red;
+        margin-bottom: 6rem;
     }
 }
