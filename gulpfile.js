@@ -27,7 +27,8 @@ gulp.task('common-js', function() {
 
 gulp.task('scripts', ['common-js'], function() {
 	return gulp.src([
-		'app/js/common.min.js', // Всегда в конце
+		'app/libs/PureJSCarousel/purejscarousel.js',
+		'app/js/common.min.js' // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)

@@ -39,4 +39,16 @@
         color: $red;
         margin-bottom: 6rem;
     }
+
+    &--stuff {
+        color: #fff;
+
+        &::before {
+            right: 62%;
+        }
+    
+        &::after {
+            left: 62%;
+        }
+    }
 }
