@@ -109,10 +109,13 @@ body {
 
 .container {
     width: auto;
-    padding: 0 6rem;
-    max-width: 129rem;
+    max-width: 117.2rem;
     position: relative;
     margin: 0 auto;
+
+    @include respond(tab-port) {
+       padding: 0 2rem;
+    }
 }
 
 img {
