@@ -1,7 +1,11 @@
 .stuff {
     background-color: $pink;
-    padding: 9rem 0;
+    padding: 10rem 0 11rem 0;
     position: relative;
+
+    @include respond(phone) {
+        padding: 9rem 5rem;
+    }
 
     &__items-carousel {
         display: flex;
@@ -61,10 +65,30 @@
 
 .purejscarousel-btn-next {
     left: 95%;
+
+    &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f061";
+    }
+
+    @include respond(phone) {
+        left: 85%
+    }
 }
 
 .purejscarousel-btn-prev {
     right: 95%;
+
+    &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f060";
+    }
+
+    @include respond(phone) {
+        right: 85%
+    }
 }
 
 .purejscarousel-dots-container {

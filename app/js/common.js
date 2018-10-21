@@ -49,5 +49,6 @@ function showSlides(n) {
 var carouselOneByOne = new PureJSCarousel({
   carousel: '#carousel',
   slide: '.stuff__items-carousel',
+  oneByOne: true,
   infinite: true
 });
