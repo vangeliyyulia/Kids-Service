@@ -17,6 +17,7 @@
         width: 5.6rem;
         height: 1.1rem;
         top: 50%;
+        transform: translateY(-50%);
 
         @include respond(tab-port) {
             display: none;
@@ -50,5 +51,10 @@
         &::after {
             left: 62%;
         }
+    }
+
+    &--testimonials {
+        color: $red;
+        margin-bottom: 4rem;
     }
 }
