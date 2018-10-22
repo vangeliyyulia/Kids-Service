@@ -1,0 +1,115 @@
+.pricing {
+    padding: 9rem 0;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 31.6%;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        box-shadow: $box-shadow;
+
+        &:nth-child(1) .pricing__heading,
+        &:nth-child(1) .btn--pricing {
+            background-color: $yellow;
+        }
+
+        &:nth-child(1) i {
+            color: $yellow;
+        }
+
+        &:nth-child(2) .pricing__heading,
+        &:nth-child(2) .btn--pricing {
+            background-color: $green;
+        }
+
+        &:nth-child(2) i {
+            color: $green;
+        }
+
+        &:nth-child(3) .pricing__heading,
+        &:nth-child(3) .btn--pricing {
+            background-color: $red;
+        }
+
+        &:nth-child(3) i {
+            color: $red;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__heading {
+        padding: 2rem 2rem 3rem 2rem;
+        width: 100%;
+        color: #fff;
+        font-family: "Dosis-ExtraBold";
+        font-size: 3rem;
+        text-transform: uppercase;
+        border-radius: 1rem 1rem 0 0;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__img-box {
+        margin-top: -2rem;
+        position: relative;
+        z-index: -1;
+    }
+
+    &__content {
+        background-color: #f8f8f8;
+        width: 100%;
+        padding: 5rem 2rem 2.5rem 2rem;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #666;
+        margin-top: 4rem;
+    }
+
+    &__flex-wrapper {
+        display: flex;
+        align-items: center;
+        font-family: "Dosis-Regular";
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+
+        & span {
+            display: inline-block;
+            margin-left: 1rem;
+        }
+    }
+
+    &__price {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__cost {
+        font-family: "Dosis-SemiBold";
+        color: $yellow;
+        font-size: 4rem;
+    }
+
+    &__text {
+        font-family: "Dosis-Regular";
+        color: #666;
+        font-size: 1.6rem;
+
+    }
+}

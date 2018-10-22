@@ -19,6 +19,7 @@
         font-family: "Lato-Regular";
         border-radius: 1rem;
         position: relative;
+        box-shadow: $box-shadow;
 
         &::before {
             font-family: "Font Awesome 5 Free";
