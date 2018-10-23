@@ -1,0 +1,112 @@
+.footer {
+    color: #fff;
+
+    &__main {
+        background-image: url(../img/footer.jpg);
+        background-size: cover;
+        background-position: center top;
+        padding: 7rem 0;
+
+        & .container {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__text {
+        width: 25%;
+        color: #fff;
+    }
+
+    &__description {
+        font-family: "Lato-Regular";
+        font-size: 1.4rem;
+        line-height: 1.7;
+        max-width: 27.1rem;
+
+        &:not(:last-child) {
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__links {
+        width: 14.5%;
+    }
+
+    &__item-heading {
+        font-family: "Dosis-SemiBold";
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__link {
+        color: #fff;
+        text-decoration: none;
+        font-family: "Lato-Regular";
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        transition: color .5s;
+
+        &:hover {
+            color: $red;
+        }
+
+        & span {
+            margin-left: 1rem;
+        }
+    }
+}
+
+.posts {
+    width: 25%; 
+
+    &__item {
+        padding-bottom: 1rem;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(255, 255, 255, .7);
+        }
+    }
+
+    & .links__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1.5rem;
+    }
+
+    &__link {
+        display: flex;
+        align-items: flex-start;
+        color: #fff;
+        text-decoration: none;
+        transition: opacity .5s;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 1rem;
+        font-family: "Lato-Regular";
+        font-size: 1.4rem;
+    }
+}
+
+.subscribe {
+    width: 25%;
+
+    &__text {
+        font-family: "Lato-Regular";
+        font-size: 1.4rem;
+        margin-bottom: 3rem;
+    }
+}
