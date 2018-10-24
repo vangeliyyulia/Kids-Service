@@ -28,6 +28,7 @@ gulp.task('common-js', function() {
 gulp.task('scripts', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/PureJSCarousel/purejscarousel.js',
+		'app/libs/Animate-on-scroll/aos.js',
 		'app/js/common.min.js' // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))

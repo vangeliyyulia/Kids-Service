@@ -24,19 +24,19 @@
         align-items: center;
         justify-content: center;
 
-        &:nth-child(1) a {
+        &:nth-child(1) span {
             background-color: $yellow;
         }
 
-        &:nth-child(2) a {
+        &:nth-child(2) span {
             background-color: $green;
         }
 
-        &:nth-child(3) a {
+        &:nth-child(3) span {
             background-color: $red;
         }
 
-        &:nth-child(4) a {
+        &:nth-child(4) span {
             background-color: $blue;
         }
 
@@ -64,16 +64,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        text-decoration: none;
         color: #fff;
         font-family: "Dosis-SemiBold";
         font-size: 1.6rem;
         padding: 1rem 2.5rem;
         text-transform: uppercase;
         border-radius: .5rem;
-
-        &:hover {
-            opacity: .8; 
-        }
     }
 }

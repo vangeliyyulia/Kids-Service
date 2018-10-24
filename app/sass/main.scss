@@ -9,6 +9,7 @@
 @import 'base/mixins';
 
 @import 'vendors/purejscarousel';
+@import 'vendors/animate';
 
 @import 'components/header';
 @import 'components/footer';
@@ -16,6 +17,7 @@
 @import 'components/nav';
 @import 'components/btn';
 @import 'components/section-heading';
+@import 'components/btn-top';
 
 @import 'sections/welcome';
 @import 'sections/services';
@@ -24,5 +26,6 @@
 @import 'sections/testimonials';
 @import 'sections/facts';
 @import 'sections/pricing';
+@import 'sections/map';
 
 

@@ -1,0 +1,25 @@
+.btn-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    border: 2px solid #fff;
+    background-color: $red;
+    color: #fff;
+    font-size: 1.6rem;
+    position: fixed;
+    bottom: 8rem;
+    right: 4rem;
+    z-index: 9999;
+    display: none;
+
+    &:hover {
+        background-color: rgba(234, 112, 102, .7);
+    }
+
+    & .active {
+        display: block;
+    }
+}
