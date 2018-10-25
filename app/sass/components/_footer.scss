@@ -124,6 +124,10 @@
         &:nth-child(5) a {
             background-color: $pink;
         }
+
+        &:hover {
+            opacity: .7;
+        }
     }
 
     &__social-link {
