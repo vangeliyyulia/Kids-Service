@@ -70,3 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
       } else backToTop.className = "notShow"
   };
 });
+
+// Lazy Load 
+kit.createLazy();

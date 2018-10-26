@@ -80,3 +80,17 @@
         }
     }
 }
+
+.image {
+    filter: blur(20px);
+    transition: background-image ease-in-out 0.5s;
+}
+
+.slider__img {
+    background-image: url(../img/hero-1.jpg);
+}
+
+.slider__img.loaded {
+    filter: blur(0);
+    background-image: url(../img/hero-1.jpg);
+}

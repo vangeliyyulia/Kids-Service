@@ -72,3 +72,17 @@
         border-radius: .5rem;
     }
 }
+
+.image {
+    filter: blur(20px);
+    transition: background-image ease-in-out 0.5s;
+}
+
+.facts__img {
+    background-image: url(../img/facts.jpg);
+}
+
+.facts__img.loaded {
+    filter: blur(0);
+    background-image: url(../img/facts.jpg);
+}
