@@ -1,0 +1,18 @@
+.purejscarousel {
+    overflow: hidden;
+  }
+  
+  .purejscarousel-list:before,
+  .purejscarousel-list:after {
+    content: "";
+    display: table;
+  }
+  
+  .purejscarousel-list:after {
+    clear: both;
+  }
+  
+  .purejscarousel-slide {
+    float: left;
+  }
+  

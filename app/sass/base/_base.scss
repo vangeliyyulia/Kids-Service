@@ -1,0 +1,137 @@
+@font-face {
+    font-family: "Lato-Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Lato-Regular"),
+      local("Lato-Regular"),
+      url("../fonts/Lato-Regular.woff2") format("woff2");
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: "OpenSans-Bold";
+    font-style: normal;
+    font-weight: 500;
+    src: local("OpenSans-Bold Medium"),
+      local("OpenSans-Bold-Medium"),
+      url("../fonts/OpenSans-Bold.woff") format("woff");
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: "OpenSans-SemiBold";
+    font-style: bold;
+    font-weight: 700;
+    src: local("OpenSans-SemiBold"),
+      local("OpenSans-SemiBold"),
+      url("../fonts/OpenSans-SemiBold.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Dosis-Regular";
+    font-style: bold;
+    font-weight: 700;
+    src: local("Dosis-Regular"),
+      local("Dosis-Regular"),
+      url("../fonts/Dosis-Regular.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Dosis-SemiBold";
+    font-style: bold;
+    font-weight: 700;
+    src: local("Dosis-SemiBold"),
+      local("Dosis-SemiBold"),
+      url("../fonts/Dosis-SemiBold.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Dosis-ExtraBold";
+    font-style: bold;
+    font-weight: 700;
+    src: local("Dosis-ExtraBold"),
+      local("Dosis-ExtraBold"),
+      url("../fonts/Dosis-ExtraBold.woff") format("woff");
+    font-display: swap;
+}
+
+@mixin respond ($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content };
+    }
+
+    @if $breakpoint == tab-land {
+        @media only screen and  (max-width: 75em) { @content };
+    }
+
+    @if $breakpoint == tab-port {
+        @media only screen and  (max-width: 56.25em) { @content };
+    }
+
+    @if $breakpoint == big-desktop {
+        @media only screen and  (min-width: 112.5em) { @content };
+    }
+}
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%;
+    }
+}
+
+body {
+    position: relative;
+	overflow-x: hidden;
+	opacity: 1;
+}
+
+.container {
+    width: auto;
+    max-width: 117.2rem;
+    position: relative;
+    margin: 0 auto;
+
+    @include respond(tab-port) {
+       padding: 0 2rem;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0; 
+}
+
+ul {
+    list-style: none;
+}
+

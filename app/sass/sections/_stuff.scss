@@ -1,0 +1,96 @@
+.stuff {
+    background-color: $pink;
+    padding: 10rem 0 11rem 0;
+    position: relative;
+
+    @include respond(phone) {
+        padding: 9rem 5rem;
+    }
+
+    &__items-carousel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 29rem;
+    }
+
+    &__img {
+        margin-bottom: 1.5rem;
+    }
+
+    &__name {
+        font-family: "Dosis-SemiBold";
+        font-size: 2.2rem;
+        line-height: 1;
+        color: #fff;
+        margin-bottom: 1rem;
+    }
+
+    &__desc {
+        font-family: "Lato-Regular";
+        font-size: 1.4rem;
+        line-height: 1;
+        color: #fff;
+    }
+}
+
+.purejscarousel-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 0 0 rgba(0, 0, 0, .1);
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    color: #666;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .5s;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+
+    &:hover,
+    &:focus, &:active {
+        background-color: rgba(#fff, .7);
+        outline: none;
+    }
+}
+
+.purejscarousel-btn-next {
+    left: 95%;
+
+    &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f061";
+    }
+
+    @include respond(phone) {
+        left: 85%
+    }
+}
+
+.purejscarousel-btn-prev {
+    right: 95%;
+
+    &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f060";
+    }
+
+    @include respond(phone) {
+        right: 85%
+    }
+}
+
+.purejscarousel-dots-container {
+    display: none;
+}

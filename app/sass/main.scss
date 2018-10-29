@@ -1,1 +1,34 @@
+@import 'base/normalize';
+
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "node_modules/@fortawesome/fontawesome-free/scss/solid";
+
 @import 'base/base';
+@import 'base/variables';
+@import 'base/animations';
+@import 'base/mixins';
+
+@import 'vendors/purejscarousel';
+@import 'vendors/animate';
+
+@import 'components/header';
+@import 'components/footer';
+@import 'components/slider';
+@import 'components/nav';
+@import 'components/btn';
+@import 'components/section-heading';
+@import 'components/btn-top';
+
+@import 'sections/welcome';
+@import 'sections/services';
+@import 'sections/events';
+@import 'sections/stuff';
+@import 'sections/testimonials';
+@import 'sections/facts';
+@import 'sections/pricing';
+@import 'sections/map';
+@import 'sections/modal';
+
+

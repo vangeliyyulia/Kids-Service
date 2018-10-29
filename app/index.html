@@ -1,13 +1,637 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta property="og:image" content="img/hero1.jpg">
+    <meta property="og:image:height" content="800">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="Kidz Service">
+    <meta property="og:description" content="Kidz Service - primary school for children">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <link rel="preload" href="fonts/Lato-Regular.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/OpenSans-Bold.woff" as="font" type="font/woff">
+    <link rel="preload" href="fonts/OpenSans-SemiBold.woff" as="font" type="font/woff">
+    <link rel="preload" href="fonts/Dosis-Regular.woff" as="font" type="font/woff">
+    <link rel="preload" href="fonts/Dosis-SemiBold.woff" as="font" type="font/woff">
+    <link rel="preload" href="fonts/Dosis-ExtraBold.woff" as="font" type="font/woff">
     <title>Kidz' Service</title>
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
-    kidz
+    <header class="header" id="header">
+        <ul class="header__contacts">
+            <li>
+                <a href="mailto:info@kidzservice.com">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@kidzservice.com</span>
+                </a>
+            </li>
+            <li>
+                <a href="tel:+12345678900">
+                    <i class="fas fa-phone"></i>
+                    <span>+1 234 56789 00</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="header__user-nav">
+            <li>
+                <a href="#">
+                    <i class="fas fa-globe-americas"></i>
+                    <span>Language</span>
+                    <i class="fas fa-angle-down"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-unlock"></i>
+                    <span>Login or Create an Account</span>
+                </a>
+            </li>
+        </ul>
+        <div class="cart">
+            <a href="#">
+                <i class="fas fa-shopping-basket"></i>
+            </a>
+        </div>
+    </header>
+    <main class="main">
+        <nav class="nav">
+            <div class="mobile-wrap">
+                <a href="#" class="nav__logo">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+                <a href="#" class="btn_mnu">
+                    <div class="btn_row"></div>
+                    <div class="btn_row"></div>
+                    <div class="btn_row"></div>
+                </a>
+            </div>
+            <ul class="nav__list" id="nav">
+                <li>
+                    <a href="#" class="active">
+                        <div><i class="fas fa-home"></i></div>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div><i class="fas fa-file-alt"></i></div>
+                        <span>Stores</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div><i class="fas fa-list-ul"></i></div>
+                        <span>Pages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div><i class="fas fa-edit"></i></div>
+                        <span>Blog</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div><i class="fas fa-calendar-alt"></i></div>
+                        <span>Events</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div><i class="fas fa-link"></i></div>
+                        <span>Components</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="slider">
+            <section class="slider__toggles">
+                <h3 class="visually-hidden">Slider Toggles</h3>
+                <button class="slider__toggle slider__toggle--prev" type="button" onclick="currentSlide(1)">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="visually-hidden">Slider 1</span>
+                </button>
+                <button class="slider__toggle slider__toggle--next" type="button" onclick="currentSlide(2)">
+                        <i class="fas fa-arrow-right"></i>
+                    <span class="visually-hidden">Slider 2</span>
+                </button>
+            </section>
+            <div class="slider__list">
+                <div class="slider__item slider-animation image slider__img kit-lazy">
+                    <div class="slider__content">
+                        <h1 data-aos="fade-right" data-aos-duration="1000" class="slider__heading"><span>Starting Primary</span> School</h1>
+                        <p data-aos="fade-left" data-aos-duration="1000" class="slider__description">Our childcare center will provide an environment where your child will feel safe, happy and rewarded.</p>
+                        <a href="#" class="btn btn--hero">View more</a>
+                    </div>
+                </div>
+                <div class="slider__item slider-animation" style="background-image: url(img/hero-2.jpg)">
+                    <div class="slider__content">
+                        <h1 class="slider__heading"><span>Social and emotional</span> learning</h1>
+                        <p class="slider__description">Supporting children’s social and emotional development.</p>
+                        <a href="#" class="btn btn--hero">View more</a>
+                    </div>
+                </div>               
+            </div>
+        </div>
+        <section class="welcome">
+            <div class="container">
+                <div data-aos="fade-right" data-aos-duration="1000" class="welcome__content">
+                    <h2 data-aos="fade-zoom-in" data-aos-duration="1000" class="welcome__heading">
+                        <span>Welcome to</span>
+                        <span>Kidz Daycare Center</span>
+                    </h2>
+                    <p class="welcome__description">
+                        We truly know how important it is for you to find just the right childcare center. Our dedication to providing a top-notch facility for children aged 6 weeks to 8 years is second to none. We believe in customizing the day care experience for every child.
+                    </p>
+                    <a href="#" class="btn btn--welcome">Read more</a>
+                </div>
+            </div>
+        </section>
+        <section class="services">
+            <div class="container">
+                <h2 data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50" class="section__heading section__heading--services">Our Services</h2>
+                <div class="services__wrapper">
+                    <ul class="services__list services__list--left">
+                        <li class="services__item" data-aos="fade-down" data-aos-duration="1000">
+                            <div class="services__icon"><i class="fas fa-utensils"></i></div>
+                            <div class="services__content">
+                                <h3 class="services__item-heading">Delicious Food</h3>
+                                <p class="services__description">At Kidz Center we support our team of care givers. We make sure to provide the right balance of guidance and freedom.</p>
+                            </div>
+                        </li>
+                        <li class="services__item" data-aos="fade-down" data-aos-duration="1000">
+                            <div class="services__icon"><i class="fas fa-heart"></i></div>
+                            <div class="services__content">
+                                <h3 class="services__item-heading">Love & Care</h3>
+                                <p class="services__description">We think of our facility as a team of experts, but we are also proud to say we're compassionate, kind and knowledgeable.</p>
+                            </div>
+                        </li>
+                        <li class="services__item" data-aos="fade-down" data-aos-duration="1000">
+                            <div class="services__icon"><i class="fas fa-heart"></i></div>
+                            <div class="services__content">
+                                <h3 class="services__item-heading">Fun Sports</h3>
+                                <p class="services__description">You can rest assured that your child will be engaging in a scope of hands-on activities.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="services__img-box">
+                        <img src="img/boy.png" alt="boy" class="services__img">
+                    </div>
+                    <ul class="services__list services__list--right">
+                        <li class="services__item" data-aos="fade-down" data-aos-duration="1000">
+                            <div class="services__icon"><i class="fas fa-car"></i></div>
+                            <div class="services__content">
+                                <h3 class="services__item-heading">Transportation</h3>
+                                <p class="services__description">At the homework center, your child has the opportunity to get some of his or her work out of the way.</p>
+                            </div>
+                        </li>
+                        <li class="services__item" data-aos="fade-down" data-aos-duration="1000">
+                            <div class="services__icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="services__content">
+                                <h3 class="services__item-heading">Experience Teachers</h3>
+                                <p class="services__description">We think of our facility as a team of experts, but we are also proud to say we're compassionate, kind and knowledgeable.</p>
+                            </div>
+                        </li>
+                        <li class="services__item" data-aos="fade-down" data-aos-duration="1000">
+                            <div class="services__icon"><i class="fas fa-leaf"></i></div>
+                            <div class="services__content">
+                                <h3 class="services__item-heading">Fysichal Activity</h3>
+                                <p class="services__description">You can rest assured that your child will be engaging in a scope of hands-on activities.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="events">
+            <div class="container">
+                <h2 data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50" class="section__heading section__heading--events">Our Events</h2>
+                <ul class="events__list">
+                    <li class="events__item" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-offset="-10">
+                        <div class="events__img">
+                            <div class="events__date">10 July</div>
+                            <img src="img/1.png" alt="event 1">
+                        </div>
+                        <div class="events__content">
+                            <h4 class="events__heading">Infants & Toddlers</h4>
+                            <div class="events__wrapper">
+                                <i class="fas fa-map-marker"></i>
+                                <span>Our School</span>
+                            </div>
+                            <div class="events__wrapper">
+                                <i class="fas fa-clock"></i>
+                                <span>9.00AM - 11.00AM</span>
+                            </div>
+                            <p class="events__description">Our infant room welcomes children ages 6 weeks to 15 months with open arms.</p>
+                            <a href="#" class="btn btn--events">Read More</a>
+                        </div>
+                    </li>
+                    <li class="events__item" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-offset="-10">
+                        <div class="events__img">
+                            <div class="events__date">10 July</div>
+                            <img src="img/2.png" alt="event 1">
+                        </div>
+                        <div class="events__content">
+                            <h4 class="events__heading">Pre-Kindergarten</h4>
+                            <div class="events__wrapper">
+                                <i class="fas fa-map-marker"></i>
+                                <span>Our School</span>
+                            </div>
+                            <div class="events__wrapper">
+                                <i class="fas fa-clock"></i>
+                                <span>9.00AM - 11.00AM</span>
+                            </div>
+                            <p class="events__description">Our infant room welcomes children ages 6 weeks to 15 months with open arms.</p>
+                            <a href="#" class="btn btn--events">Read More</a>
+                        </div>
+                    </li>
+                    <li class="events__item" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-offset="-10">
+                        <div class="events__img">
+                            <div class="events__date">10 July</div>
+                            <img src="img/3.png" alt="event 1">
+                        </div>
+                        <div class="events__content">
+                            <h4 class="events__heading">Preschool & Universal </h4>
+                            <div class="events__wrapper">
+                                <i class="fas fa-map-marker"></i>
+                                <span>Our School</span>
+                            </div>
+                            <div class="events__wrapper">
+                                <i class="fas fa-clock"></i>
+                                <span>9.00AM - 11.00AM</span>
+                            </div>
+                            <p class="events__description">Our infant room welcomes children ages 6 weeks to 15 months with open arms.</p>
+                            <a href="#" class="btn btn--events">Read More</a>
+                        </div>
+                    </li>
+                    <li class="events__item" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-offset="-10">
+                        <div class="events__img">
+                            <div class="events__date">10 July</div>
+                            <img src="img/4.png" alt="event 1">
+                        </div>
+                        <div class="events__content">
+                            <h4 class="events__heading">School Age</h4>
+                            <div class="events__wrapper">
+                                <i class="fas fa-map-marker"></i>
+                                <span>Our School</span>
+                            </div>
+                            <div class="events__wrapper">
+                                <i class="fas fa-clock"></i>
+                                <span>9.00AM - 11.00AM</span>
+                            </div>
+                            <p class="events__description">Our infant room welcomes children ages 6 weeks to 15 months with open arms.</p>
+                            <a href="#" class="btn btn--events">Read More</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="stuff">
+            <div class="container">
+                <h2 data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50" class="section__heading section__heading--stuff">Meet Our Stuff</h2>
+                <div class="stuff__carousel" id="carousel">
+                    <div class="stuff__items-carousel" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="-10">
+                        <img src="img/teacher1.png" alt="teacher" class="stuff__img">
+                        <span class="stuff__name">Brandon Bright</span>
+                        <span class="stuff__desc">English Teacher</span>
+                    </div>
+                    <div class="stuff__items-carousel" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150" data-aos-offset="-10">
+                        <img src="img/teacher2.png" alt="teacher" class="stuff__img">
+                        <span class="stuff__name">Sarah Smith</span>
+                        <span class="stuff__desc">Math Teacher</span>
+                    </div>
+                    <div class="stuff__items-carousel" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="250" data-aos-offset="-10">
+                        <img src="img/teacher3.png" alt="teacher" class="stuff__img">
+                        <span class="stuff__name">Robert Burrows</span>
+                        <span class="stuff__desc">Math Teacher</span>
+                    </div>
+                    <div class="stuff__items-carousel" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="350" data-aos-offset="-10">
+                        <img src="img/teacher4.png" alt="teacher" class="stuff__img">
+                        <span class="stuff__name">Andy Sturgess</span>
+                        <span class="stuff__desc">English Teacher</span>
+                    </div>
+                    <div class="stuff__items-carousel">
+                        <img src="img/teacher1.png" alt="teacher" class="stuff__img">
+                        <span class="stuff__name">Brandon Bright</span>
+                        <span class="stuff__desc">English Teacher</span>
+                    </div>
+                    <div class="stuff__items-carousel">
+                        <img src="img/teacher2.png" alt="teacher" class="stuff__img">
+                        <span class="stuff__name">Sarah Smith</span>
+                        <span class="stuff__desc">Math Teacher</span>
+                    </div>
+                    <div class="stuff__items-carousel">
+                        <img src="img/teacher3.png" alt="teacher" class="stuff__img">
+                        <span class="stuff__name">Robert Burrows</span>
+                        <span class="stuff__desc">Math Teacher</span>
+                    </div>
+                    <div class="stuff__items-carousel">
+                        <img src="img/teacher4.png" alt="teacher" class="stuff__img">
+                        <span class="stuff__name">Andy Sturgess</span>
+                        <span class="stuff__desc">English Teacher</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials">
+            <div class="container">
+                <h2 data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50" class="section__heading section__heading--testimonials">Testimonials</h2>
+                <ul class="testimonials__list">
+                    <li class="testimonials__item" data-aos="zoom-in" data-aos-duration="1000">
+                        <p class="testimonials__description">At the homework center, your child has the opportunity to get some of his or her work out of the way.</p>
+                        <span class="testimonials__activity">Physical Activity</span>
+                        <span class="testimonials__name">Sarah's Father</span>
+                    </li>
+                    <li class="testimonials__item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150">
+                        <p class="testimonials__description">At the homework center, your child has the opportunity to get some of his or her work out of the way.</p>
+                        <span class="testimonials__activity">Physical Activity</span>
+                        <span class="testimonials__name">Sarah's Father</span>
+                    </li>
+                    <li class="testimonials__item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="250">
+                        <p class="testimonials__description">At the homework center, your child has the opportunity to get some of his or her work out of the way.</p>
+                        <span class="testimonials__activity">Physical Activity</span>
+                        <span class="testimonials__name">Sarah's Father</span>
+                    </li>
+                    <li class="testimonials__item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="350">
+                        <p class="testimonials__description">At the homework center, your child has the opportunity to get some of his or her work out of the way.</p>
+                        <span class="testimonials__activity">Physical Activity</span>
+                        <span class="testimonials__name">Sarah's Father</span>
+                    </li>
+                    <li class="testimonials__item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="450">
+                        <p class="testimonials__description">At the homework center, your child has the opportunity to get some of his or her work out of the way.</p>
+                        <span class="testimonials__activity">Physical Activity</span>
+                        <span class="testimonials__name">Sarah's Father</span>
+                    </li>
+                    <li class="testimonials__item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="550">
+                        <p class="testimonials__description">At the homework center, your child has the opportunity to get some of his or her work out of the way.</p>
+                        <span class="testimonials__activity">Physical Activity</span>
+                        <span class="testimonials__name">Sarah's Father</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="facts image facts__img kit-lazy">
+            <div class="container">
+                <h2 data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50" class="section__heading section__heading--facts">Some Fun Facts</h2>
+                <p class="facts__heading">Our childcare center will provide an environment where your child will feel safe, happy and rewarded.</p>
+                <ul class="facts__list">
+                    <li class="facts__item" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="facts__figure">125</div>
+                        <span class="facts__link">Events Held</span>
+                    </li>
+                    <li class="facts__item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="250">
+                        <div class="facts__figure">539</div>
+                        <span class="facts__link">Happy Funs</span>
+                    </li>
+                    <li class="facts__item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="250">
+                        <div class="facts__figure">375</div>
+                        <span class="facts__link">Testimonials</span>
+                    </li>
+                    <li class="facts__item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="250">
+                        <div class="facts__figure">135</div>
+                        <span class="facts__link">Teachers</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="pricing">
+            <div class="container">
+                <h2 data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50" class="section__heading section__heading--pricing">Pricing Table</h2>
+                <ul class="pricing__list">
+                    <li class="pricing__item" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="pricing__heading">Morning Session</div>
+                        <div class="pricing__img-box">
+                            <img src="img/pricing1.png" alt="pricing1" class="pricing__img">
+                        </div>
+                        <div class="pricing__content">
+                            <div class="pricing__flex-wrapper">
+                                <i class="fas fa-birthday-cake"></i>
+                                <span>2 Meals/Day</span>
+                            </div>
+                            <div class="pricing__flex-wrapper">
+                                <i class="fas fa-medkit"></i>
+                                <span>Medical Assistance</span>
+                            </div>
+                            <div class="pricing__flex-wrapper">
+                                <i class="fas fa-paint-brush"></i>
+                                <span>Drawing & Dancing</span>
+                            </div>
+                            <div class="pricing__flex-wrapper">
+                                <i class="fas fa-car"></i>
+                                <span>Free Transport</span>
+                            </div>
+                            <div class="pricing__wrapper">
+                                <a href="#" class="btn btn--pricing" onclick="openForm()">Choose plan</a>
+                                <div class="pricing__price">
+                                    <span class="pricing__cost">$69</span>
+                                    <span class="pricing__text">Per Month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pricing__item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="150">
+                        <div class="pricing__heading">Evening Session</div>
+                        <div class="pricing__img-box">
+                            <img src="img/pricing2.png" alt="pricing1" class="pricing__img">
+                        </div>
+                        <div class="pricing__content">
+                            <div class="pricing__flex-wrapper">
+                                <i class="fas fa-birthday-cake"></i>
+                                <span>2 Meals/Day</span>
+                            </div>
+                            <div class="pricing__flex-wrapper">
+                                <i class="fas fa-medkit"></i>
+                                <span>Medical Assistance</span>
+                            </div>
+                            <div class="pricing__flex-wrapper">
+                                <i class="fas fa-paint-brush"></i>
+                                <span>Drawing & Dancing</span>
+                            </div>
+                            <div class="pricing__flex-wrapper">
+                                <i class="fas fa-car"></i>
+                                <span>Free Transport</span>
+                            </div>
+                            <div class="pricing__wrapper">
+                                <a href="#" class="btn btn--pricing" onclick="openForm()">Choose plan</a>
+                                <div class="pricing__price">
+                                    <span class="pricing__cost">$69</span>
+                                    <span class="pricing__text">Per Month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pricing__item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="250">
+                        <div class="pricing__heading">Fullday Session</div>
+                        <div class="pricing__img-box">
+                            <img src="img/pricing3.png" alt="pricing1" class="pricing__img">
+                        </div>
+                        <div class="pricing__content">
+                            <div class="pricing__flex-wrapper">
+                                <i class="fas fa-birthday-cake"></i>
+                                <span>2 Meals/Day</span>
+                            </div>
+                            <div class="pricing__flex-wrapper">
+                                <i class="fas fa-medkit"></i>
+                                <span>Medical Assistance</span>
+                            </div>
+                            <div class="pricing__flex-wrapper">
+                                <i class="fas fa-paint-brush"></i>
+                                <span>Drawing & Dancing</span>
+                            </div>
+                            <div class="pricing__flex-wrapper">
+                                <i class="fas fa-car"></i>
+                                <span>Free Transport</span>
+                            </div>
+                            <div class="pricing__wrapper">
+                                <a href="#" class="btn btn--pricing" onclick="openForm()">Choose plan</a>
+                                <div class="pricing__price">
+                                    <span class="pricing__cost">$69</span>
+                                    <span class="pricing__text">Per Month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="map">
+            <h3 class="visually-hidden">Map</h3>
+            <img src="img/map.jpg" alt="map" class="map__img">
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__main">
+            <div class="container">
+                <div class="footer__text">
+                    <a href="#" class="nav__logo">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                    <p class="footer__description">
+                        By supporting our children, parents and teachers, Kidz Daycare creates a positive learning environment that engages, nurtures and protects, while helping your child grow healthy and strong. 
+                    </p>
+                    <p class="footer__description">
+                        Kidz Daycare offers a variety of developmental and educational programs for your child, organized by age group.  
+                    </p>
+                </div>
+                <ul class="footer__links">
+                    <li class="footer__item-heading">Useful Links</li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">
+                            <i class="fas fa-angle-double-right"></i>
+                            <span>About Kidz School</span>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">
+                            <i class="fas fa-angle-double-right"></i>
+                            <span>Mobile</span>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">
+                            <i class="fas fa-angle-double-right"></i>
+                            <span>Why Kidz School</span>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">
+                            <i class="fas fa-angle-double-right"></i>
+                            <span>Social Media</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="posts">
+                    <li class="footer__item-heading">Recent Posts</li>
+                    <li class="posts__item">
+                        <a href="#" class="posts__link">
+                            <img src="img/blog1.png" alt="post" class="posts__img">
+                            <div class="links__wrapper">
+                                <h5 class="posts__heading">3 Key Benefits of Preschool Activities</h5>
+                                <span class="posts__date">July 7 - 2018</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="posts__item">
+                        <a href="#" class="posts__link">
+                            <img src="img/blog2.png" alt="post" class="posts__img">
+                            <div class="links__wrapper">
+                                <h5 class="posts__heading">A Guide to Playground Safety</h5>
+                                <span class="posts__date">August 7 - 2018</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="posts__item">
+                        <a href="#" class="posts__link">
+                            <img src="img/blog3.png" alt="post" class="posts__img">
+                            <div class="links__wrapper">
+                                <h5 class="posts__heading">5 Common Myths About Pre-K Programs</h5>
+                                <span class="posts__date">August 27 - 2018</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="subscribe">
+                    <h3 class="footer__item-heading">Mailing List</h3>
+                    <p class="subscribe__text">Sign up to our mailing list to get latest updates and offers.</p>
+                    <div class="subscribe__wrapper">
+                        <input type="text" class="subscribe__input" placeholder="Email Address">
+                        <button type="submit" class="subscribe__ok"><i class="fas fa-check"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p class="footer__copyright">&copy; Copyright Kidz School design by Abdus</p>
+                <ul class="footer__social">
+                    <li class="footer__social-links">
+                        <a href="#" class="footer__social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="footer__social-links">
+                        <a href="#" class="footer__social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li class="footer__social-links">
+                        <a href="#" class="footer__social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="footer__social-links">
+                        <a href="#" class="footer__social-link">
+                            <i class="fab fa-skype"></i>
+                        </a>
+                    </li>
+                    <li class="footer__social-links">
+                        <a href="#" class="footer__social-link">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <a href="#" id="backToTop" title="Top"><i class="fas fa-arrow-up"></i></a>
+    <section class="modal" id="modal">
+        <form action="POST" class="form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit">Send</button>
+            <a href="#" onclick="closeForm()">X</a>
+        </form>
+    </section>
+
+    <script src="js/scripts.min.js"></script>
 </body>
 </html>

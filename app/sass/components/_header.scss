@@ -1,0 +1,83 @@
+.header {
+    background-color: #2f3c43;
+    padding: 1rem 9rem;
+    display: flex;
+    color: #fff;
+    position: relative;
+    z-index: 20;
+
+    @include respond(phone) {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    a {
+        color: #fff;
+        font-family: "Lato-Regular";
+        font-size: 1.3rem;
+        line-height: 1;
+        text-decoration: none;
+        transition: opacity .5s;
+
+        &:hover {
+            opacity: .8; 
+        }
+    }
+
+    li {
+        &:not(last-child) {
+            margin-right: 5rem;
+        }
+
+        @include respond(phone) {
+            padding: 1.5rem;
+        }
+    }
+
+    &__contacts,
+    &__user-nav {
+        display: flex;
+        align-items: center;
+
+        @include respond(phone) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        & span {
+            margin-left: 1rem;
+        }
+    }
+
+    &__contacts {
+        margin-right: auto;
+
+        @include respond(phone) {
+            margin-right: 0;
+        }
+    }
+
+    &__user-nav {
+        margin-left: auto;
+
+        @include respond(phone) {
+            margin-left: 0;
+        }
+    }
+}
+
+.cart a {
+    background-color: $red;
+    width: 3rem;
+    height: 3rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart {
+    @include respond(phone) {
+        align-self: center;
+    }
+}

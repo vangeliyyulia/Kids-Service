@@ -1,0 +1,73 @@
+.section__heading {
+    font-family: "Dosis-ExtraBold";
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6.5rem;
+
+    &::before, &::after {
+        content: '';
+        display: block;
+        background-image: url(../img/decor-yellow.png);
+        position: absolute;
+        width: 5.6rem;
+        height: 1.1rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &::before {
+        right: 60%;
+    }
+
+    &::after {
+        left: 60%;
+    }
+
+    &--services {
+        color: #fff;       
+    }
+
+    &--events {
+        color: $red;
+        margin-bottom: 6rem;
+    }
+
+    &--stuff {
+        color: #fff;
+
+        &::before {
+            right: 62%;
+        }
+    
+        &::after {
+            left: 62%;
+        }
+    }
+
+    &--testimonials {
+        color: $red;
+        margin-bottom: 4rem;
+    }
+
+    &--facts {
+        color: #fff;
+        margin-bottom: 0;
+        
+        &::before, &::after {
+            display: none;
+        }
+    }
+
+    &--pricing {
+        color: $red;
+    }
+}

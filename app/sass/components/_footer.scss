@@ -1,0 +1,252 @@
+.footer {
+    color: #fff;
+
+    &__main {
+        background-image: url(../img/footer.jpg);
+        background-size: cover;
+        background-position: center top;
+        padding: 7rem 0;
+
+        & .container {
+            display: flex;
+            justify-content: space-between;
+
+            @include respond(tab-port) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__text {
+        width: 25%;
+        color: #fff;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__description {
+        font-family: "Lato-Regular";
+        font-size: 1.4rem;
+        line-height: 1.7;
+        max-width: 27.1rem;
+
+        &:not(:last-child) {
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__links {
+        width: 14.5%;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__item-heading {
+        font-family: "Dosis-SemiBold";
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__link {
+        color: #fff;
+        text-decoration: none;
+        font-family: "Lato-Regular";
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        transition: color .5s;
+
+        &:hover {
+            color: $red;
+        }
+
+        & span {
+            margin-left: 1rem;
+        }
+    }
+
+    &__bottom {
+        background-color: #041319;
+        padding: 1rem 0;
+
+        & .container {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__copyright {
+        margin-right: auto;
+        color: #fff;
+        font-size: 1.3rem;
+        font-family: "Lato-Regular";
+    }
+
+    &__social {
+        margin-left: auto;
+        display: flex;
+    }
+
+    &__social-links {
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        &:nth-child(1) a {
+            background-color: $yellow;
+        }
+
+        &:nth-child(2) a {
+            background-color: $green;
+        }
+
+        &:nth-child(3) a {
+            background-color: $red;
+        }
+
+        &:nth-child(4) a {
+            background-color: $violet;
+        }
+
+        &:nth-child(5) a {
+            background-color: $pink;
+        }
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+
+    &__social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 1.6rem;
+        padding: .5rem;
+        text-decoration: none;
+    }
+}
+
+.posts {
+    width: 25%; 
+
+    &__item {
+        width: 100%;
+        padding-bottom: 1rem;
+
+
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(255, 255, 255, .7);
+        }
+
+        &:nth-child(n + 3) {
+            padding-top: 1rem;
+        }
+    }
+
+    & .links__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1.5rem;
+    }
+
+    &__link {
+        display: flex;
+        align-items: flex-start;
+        color: #fff;
+        text-decoration: none;
+        transition: opacity .5s;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 1rem;
+        font-family: "Lato-Regular";
+        font-size: 1.4rem;
+    }
+
+    &__date {
+        font-family: "Lato-Regular";
+        font-size: 1.4rem;
+    }
+
+    @include respond(tab-port) {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+.subscribe {
+    width: 25%;
+
+    &__text {
+        font-family: "Lato-Regular";
+        font-size: 1.4rem;
+        margin-bottom: 3rem;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__input {
+        padding: 1.3rem;
+        font-family: "Lato-Regular";
+        font-size: 1.3rem;
+        border-radius: 5px 0 0 5px;
+        border: none;
+        height: 4.2rem;
+
+        &::-webkit-input-placeholder {
+            color: #666;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+
+    &__ok {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.3rem;
+        padding: 1.5rem;
+        height: 4.2rem;
+        background-color: $red;
+        border-radius: 0 5px 5px 0;
+        border: none;
+        cursor: pointer;
+    }
+
+    @include respond(tab-port) {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
